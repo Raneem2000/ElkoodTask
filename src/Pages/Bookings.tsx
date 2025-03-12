@@ -38,7 +38,7 @@ const Users = () => {
     },
   ]);
 
-  const handleAddBooking = (newPatient) => {
+  const handleAddBooking = (newPatient: any) => {
     const newBooking = {
       id: Date.now(),
       ...newPatient,

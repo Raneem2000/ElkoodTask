@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Loader from './common/Loader';
 import Home from './Pages/Home';
-import Users from './Pages/Users';
+import Users from './Pages/Bookings';
 
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/users" element={<Users />} />
+        <Route path="/bookings" element={<Users />} />
       </Routes>
     </>
   );

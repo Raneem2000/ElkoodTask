@@ -49,7 +49,7 @@ const Slider = () => {
             احجز موعدك الآن واحصل على أفضل رعاية لأسنانك!
           </p>
           <a
-            href="/users"
+            href="/bookings"
             className="bg-lightPrimary text-white px-6 py-3 rounded-lg shadow-lg hover:bg-darkPrimary transition"
           >
             الانتقال إلى المستخدمين
