@@ -29,13 +29,6 @@ const Slider = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const goToSlide = (slideIndex: number) => {
-    setFade(true);
-    setTimeout(() => {
-      setCurrentSlide(slideIndex);
-      setFade(false);
-    }, 600); // Duration of the fade-out transition
-  };
 
   return (
     <div className="my-4">
