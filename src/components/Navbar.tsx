@@ -1,8 +1,7 @@
 // import Evento from './Evento';
 import { CiSearch } from 'react-icons/ci';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { MdOutlineShoppingCart } from 'react-icons/md';
 import { IoMdHeart } from 'react-icons/io';
 import ToggleList from './ToggleList';
 import elkood from '../assets/OIP (1).jpeg';
@@ -30,7 +29,7 @@ const Navbar = () => {
           <li>
             <Link
               className={`hover:text-lightPrimary flex h-[80px] items-center`}
-              to="/categories"
+              to="/"
             >
               Clinic
             </Link>
@@ -38,7 +37,7 @@ const Navbar = () => {
           <li>
             <Link
               className={`hover:text-lightPrimary flex h-[80px] items-center`}
-              to="/about"
+              to="/"
             >
               About
             </Link>
@@ -46,7 +45,7 @@ const Navbar = () => {
           <li>
             <Link
               className={`hover:text-lightPrimary flex h-[80px] items-center`}
-              to="/contact"
+              to="/"
             >
               Contact
             </Link>
@@ -61,13 +60,13 @@ const Navbar = () => {
           />
           <div
             className="flex items-center animate-pulse text-error cursor-pointer"
-            onClick={() => navigate('/favourite')}
+            onClick={() => navigate('/')}
           >
             <IoMdHeart />
           </div>
           <div
             className="flex items-center cursor-pointer"
-            onClick={() => navigate('/order')}
+            onClick={() => navigate('/')}
           >
             <FaUser className='text-lg' />
             <span className="flex absolute -mt-5 ml-4">

@@ -3,6 +3,7 @@ import img4 from '../assets/5.avif';
 import img2 from '../assets/2.avif';
 import img3 from '../assets/7.avif';
 import img1 from '../assets/6.avif';
+import { FaEye } from 'react-icons/fa';
 
 const images = [
   { url: img1, title: 'img 1' },
@@ -29,7 +30,6 @@ const Slider = () => {
     return () => clearInterval(interval);
   }, []);
 
-
   return (
     <div className="my-4">
       <div className="relative flex justify-center border shadow-lg border-slate-100 rounded-lg bg-transparent overflow-hidden mx-2">
@@ -37,7 +37,7 @@ const Slider = () => {
           alt={images[currentSlide].title}
           src={images[currentSlide].url}
           className={`rounded-2xl shadow-2xl object-cover w-full h-[300px] sm:h-[500px] transition-opacity duration-1000 ${
-            fade ? "opacity-0" : "opacity-100"
+            fade ? 'opacity-0' : 'opacity-100'
           }`}
         />
 
@@ -46,13 +46,13 @@ const Slider = () => {
             Elkood Clinic Dental
           </h1>
           <p className="text-white text-lg sm:text-xl mb-6">
-            احجز موعدك الآن واحصل على أفضل رعاية لأسنانك!
+            Book your appointment now and get the best care for your teeth!
           </p>
           <a
             href="/bookings"
-            className="bg-lightPrimary text-white px-6 py-3 rounded-lg shadow-lg hover:bg-darkPrimary transition"
+            className="bg-lightPrimary inline-flex items-center gap-2 font-bold text-blue-100 px-6 py-3 rounded-lg shadow-lg hover:bg-darkPrimary transition"
           >
-            الانتقال إلى المستخدمين
+            <FaEye /> Veiw All Bookings
           </a>
         </div>
       </div>
@@ -62,7 +62,7 @@ const Slider = () => {
           <div
             key={slideIndex}
             className={`mx-2 cursor-pointer rounded-full w-3 h-3 shadow-lg border border-darkPrimary ${
-              slideIndex === currentSlide ? "bg-primary" : "bg-stroke"
+              slideIndex === currentSlide ? 'bg-primary' : 'bg-stroke'
             }`}
             onClick={() => setCurrentSlide(slideIndex)}
           ></div>
@@ -70,7 +70,6 @@ const Slider = () => {
       </div>
     </div>
   );
-
 };
 
 export default Slider;

@@ -5,7 +5,15 @@ import Home from './Pages/Home';
 import Users from './Pages/Bookings';
 
 function App() {
-  return (
+  const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 1000);
+  }, []);
+
+  return loading ? (
+    <Loader />
+  ) : (
     <>
       <Routes>
         <Route path="/" element={<Home />} />

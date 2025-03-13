@@ -9,14 +9,11 @@ import {
 import elkood from '../assets/OIP.jpeg';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
-import { FaUser } from 'react-icons/fa6';
-import { SlLogout } from 'react-icons/sl';
 // import Dialog from './Dialog';
 
 function ToggleList() {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
-  const navigate = useNavigate();
+
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -36,11 +33,6 @@ function ToggleList() {
     return () => document.removeEventListener('keydown', keyHandler);
   });
 
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-
-  const handleCloseDialog = () => {
-    setIsDialogOpen(false);
-  };
 
   return (
     <>
@@ -108,7 +100,7 @@ function ToggleList() {
               </li>
               <li>
                 <Link
-                  to="/categories"
+                  to="/"
                   className={`py-2 px-3  hover:text-gold flex items-center`}
                 >
                   <FaServicestack className="mx-2" />
@@ -117,7 +109,7 @@ function ToggleList() {
               </li>
               <li>
                 <Link
-                  to="/about"
+                  to="/"
                   className={`py-2 px-3  hover:text-gold flex items-center `}
                 >
                   <FaInfoCircle className="mx-2" />
@@ -126,7 +118,7 @@ function ToggleList() {
               </li>
               <li>
                 <Link
-                  to="/contact"
+                  to="/"
                   className={`py-2 px-3  hover:text-gold flex items-center `}
                 >
                   <FaPhone className="mx-2" />
