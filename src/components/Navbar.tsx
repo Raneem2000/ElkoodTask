@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="flex w-full h-[80px] items-center text-blue-400 justify-between bg-white px-3.5 sm:px-5 text-base font-bold text-logo shadow-lg">
+      <div className="flex w-full h-[80px] items-center text-blue-400 justify-between bg-white px-3.5 sm:px-5 text-base font-bold text-logo shadow-lg scroll-smooth">
         {/* <Evento /> */}
         <ul className="hidden md:flex text-lightPrimary60 font-semibold font-heading gap-6 lg:gap-12">
           <li>
@@ -29,18 +29,18 @@ const Navbar = () => {
           <li>
             <Link
               className={`hover:text-lightPrimary flex h-[80px] items-center`}
-              to="/"
+              to="/bookings"
             >
-              Clinic
+              Bookings
             </Link>
           </li>
           <li>
-            <Link
+            <a
               className={`hover:text-lightPrimary flex h-[80px] items-center`}
-              to="/"
+              href="#about"
             >
               About
-            </Link>
+            </a>
           </li>
           <li>
             <Link

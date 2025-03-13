@@ -50,8 +50,8 @@ const Slider = () => {
           </p>
           <a
             href="/bookings"
-            className="bg-lightPrimary inline-flex items-center gap-2 font-bold text-blue-100 px-6 py-3 rounded-lg shadow-lg hover:bg-darkPrimary transition"
-          >
+            className="h-fit w-fit inline-flex items-center gap-3 bg-stroke rounded-md p-2 mt-4 text-blue-500"
+            >
             <FaEye /> Veiw All Bookings
           </a>
         </div>
